@@ -1,0 +1,13 @@
+name: MistixTreeCutter
+version: 1.0.0
+main: dev.mistix.treecutter.MistixTreeCutterPlugin
+api-version: '1.21'
+author: Mistix
+description: Sneak + bottom-log tree feller with cooldown anti-abuse
+permissions:
+  mistix.treecutter.use:
+    description: Allow using tree cutter
+    default: true
+  mistix.treecutter.bypasscooldown:
+    description: Bypass tree cutter cooldown
+    default: op

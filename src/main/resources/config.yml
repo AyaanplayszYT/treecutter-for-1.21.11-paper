@@ -1,0 +1,7 @@
+cooldown-seconds: 8
+max-blocks-per-tree: 180
+require-axe: true
+require-bottom-log: true
+messages:
+  cooldown: "§cTree cutter cooldown: %seconds%s"
+  no-permission: "§cYou don't have permission to use tree cutter."
