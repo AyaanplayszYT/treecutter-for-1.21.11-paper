@@ -1,13 +1,36 @@
 name: MistixTreeCutter
-version: 1.0.0
+version: 2.0.0
 main: dev.mistix.treecutter.MistixTreeCutterPlugin
-api-version: '1.21'
+api-version: '1.13'
 author: Mistix
-description: Sneak + bottom-log tree feller with cooldown anti-abuse
+description: Configurable tree feller with commands, toggles, effects, and cooldown controls
+commands:
+  treecutter:
+    description: Main TreeCutter command
+    usage: /treecutter <reload|status|toggle|debug|help>
+    aliases: [tc]
+  treecutterhelp:
+    description: Show TreeCutter command help
+    usage: /treecutterhelp
 permissions:
   mistix.treecutter.use:
     description: Allow using tree cutter
     default: true
+  mistix.treecutter.command:
+    description: Allow using TreeCutter commands
+    default: true
   mistix.treecutter.bypasscooldown:
     description: Bypass tree cutter cooldown
+    default: op
+  mistix.treecutter.admin.reload:
+    description: Allow reloading TreeCutter
+    default: op
+  mistix.treecutter.admin.status:
+    description: Allow viewing another player's TreeCutter status
+    default: op
+  mistix.treecutter.admin.toggle.other:
+    description: Allow toggling TreeCutter for another player
+    default: op
+  mistix.treecutter.admin.debug:
+    description: Allow toggling debug mode
     default: op

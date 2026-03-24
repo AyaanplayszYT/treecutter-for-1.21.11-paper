@@ -1,7 +1,55 @@
-cooldown-seconds: 8
-max-blocks-per-tree: 180
-require-axe: true
+debug: false
+
+enabled-worlds: []
+disabled-worlds: []
+
+allowed-tools:
+  - HAND
+  - WOODEN_AXE
+  - STONE_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - DIAMOND_AXE
+  - NETHERITE_AXE
+
+allowed-log-materials: []
+blocked-log-materials: []
+
+sneak-required: true
+activation-mode: BREAK
 require-bottom-log: true
+require-leaves: true
+break-leaves-with-tree: false
+
+max-distance-from-start-log: 12
+max-logs-per-operation: 180
+
+cooldown-seconds:
+  default: 8
+  permission-tiers:
+    mistix.treecutter.cooldown.fast: 4
+    mistix.treecutter.cooldown.faster: 2
+
+effects:
+  particles:
+    enabled: true
+    type: CLOUD
+    count: 12
+    spread: 0.25
+  sound:
+    enabled: true
+    type: BLOCK_WOOD_BREAK
+    volume: 0.8
+    pitch: 1.0
+
 messages:
-  cooldown: "§cTree cutter cooldown: %seconds%s"
-  no-permission: "§cYou don't have permission to use tree cutter."
+  prefix: "&6[TreeCutter]&r "
+  cooldown: "&cTree cutter cooldown: %seconds%s"
+  no-permission: "&cYou don't have permission to use tree cutter."
+  reload: "&aTreeCutter configuration reloaded."
+  debug: "&eDebug mode is now %state%."
+  status: "&eTreeCutter for %player% is %state%."
+  toggle-self: "&eTreeCutter is now %state%."
+  toggle-other: "&eTreeCutter for %player% is now %state%."
+  player-not-found: "&cThat player is not online."
+  console-toggle-target: "&cConsole must specify a player."
